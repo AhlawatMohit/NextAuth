@@ -1,6 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 import { toast } from 'react-hot-toast'
+import { useRouter } from 'next/navigation';
 import axios from 'axios';
 
 import {
@@ -12,7 +13,6 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination"
-import { useRouter } from 'next/navigation';
 
 const interests = [
   'Shoes',
@@ -23,7 +23,7 @@ const interests = [
   'Furniture',
 ];
 
-const homePage = () => {
+export default function homePage() {
 
   const router = useRouter();
 
@@ -93,5 +93,3 @@ const homePage = () => {
     </div>
   )
 }
-
-export default homePage;

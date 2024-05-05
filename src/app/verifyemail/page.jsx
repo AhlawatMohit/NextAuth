@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import React from 'react'
 
-const verifyEmail = () => {
+export default function verifyEmail() {
 
   return (
 
@@ -35,4 +35,3 @@ const verifyEmail = () => {
   )
 }
 
-export default verifyEmail
