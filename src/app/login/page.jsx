@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import { toast } from 'react-hot-toast'
 import axios from 'axios'
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 
 
 export default function LoginPage() {
@@ -11,7 +11,7 @@ export default function LoginPage() {
 
   const [ user, setUser ] = useState({
     email: "",
-    password: ""
+    password: "",
   });
 
   const [ buttonDisabled, setButtonDisabled ] = useState(false);
@@ -53,7 +53,7 @@ export default function LoginPage() {
 
   return (
     <div className='bg-white flex flex-col items-center justify-center h-screen mt-9'>
-    <h1>{loading ? "Processing...." : "Login"}</h1>
+    <h1>{loading ? "Processing...." : ""}</h1>
       <div className='w-[360px] lg:w-[400px] xl:w-[576px] h-[600px] bg-white p-16 rounded-[20px] border-[1px] border-[#C1C1C1]'>
         <h1 className='text-3xl text-[#000000] font-semibold text-center mb-8'>Login</h1>
         <p className='text-[#000000] text-2xl leading-7 font-medium text-center my-4'>Welcome back to ECOMMERCE</p>

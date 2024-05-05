@@ -1,8 +1,8 @@
-"use client"
+'use client'
 import React, { useState } from 'react';
 import { toast } from 'react-hot-toast'
-import { useRouter } from 'next/router'
 import axios from 'axios';
+import { useRouter } from 'next/navigation';
 
 import {
   Pagination,
@@ -14,6 +14,7 @@ import {
   PaginationPrevious,
 } from "@/components/ui/pagination"
 
+
 const interests = [
   'Shoes',
   'Men T-shirts',
@@ -23,9 +24,11 @@ const interests = [
   'Furniture',
 ];
 
-export default function homePage() {
+export default function HomePage() {
 
   const router = useRouter();
+
+  const [ savedInterests, setSavedInterests ] = useState([]);
 
   const logout =  async () => {
     try {
@@ -38,7 +41,6 @@ export default function homePage() {
     }
   }
 
-  const [ savedInterests, setSavedInterests ] = useState([]);
 
   const handleInterestChange = (interests) => {
     if(savedInterests.includes(interests)) {

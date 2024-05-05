@@ -1,24 +1,25 @@
-"use client"
+'use client'
 import Link from "next/link";
 import React, { useEffect, useState } from "react"
 import axios from "axios";
 import { toast } from "react-hot-toast"
-import { useRouter } from 'next/router'
+import { useRouter } from "next/navigation";
 
 
-export default function signupPage() {
+
+export default function SignupPage() {
 
   const router = useRouter();
 
-  const [user, setUser] = useState({
+  const [ user, setUser ] = useState({
     email: "",
     password: "",
-    username: ""
+    username: "",
   });
 
-  const [buttonDisabled, setButtonDisabled] = useState(false);
+  const [ buttonDisabled, setButtonDisabled ] = useState(false);
 
-  const [loading, setLoading] = useState(false);
+  const [ loading, setLoading ] = useState(false);
 
   const onSignup = async () => {
     try {
@@ -94,11 +95,11 @@ export default function signupPage() {
         {/* LOGIN LINK */}
         <p
           className='mt-2 text-[#333333] font-normal text-center pt-12'>
-          Have an Account?
-          <Link
+          Have an Account? 
+           <Link
             href='/login'
             className='text-[#000000] hover:text-[#000000] font-medium'>
-            LOGIN
+             LOGIN
           </Link>
         </p>
       </div>
