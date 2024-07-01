@@ -1,7 +1,7 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Live Link
-## https://next-auth-ecom.vercel.app
+## https://next-auth-login-signup.vercel.app
 
 ## Getting Started
 
